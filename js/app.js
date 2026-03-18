@@ -1,6 +1,7 @@
 import { initTheme } from "./core/theme.js";
 import { initReveal } from "./core/reveal.js";
 import { initPageTransitions } from "./core/transitions.js";
+import { initTicker } from "./core/ticker.js";
 import { initCommon } from "./pages/common.js";
 import { initDashboard } from "./pages/dashboard.js";
 import { initTasks } from "./pages/tasks.js";
@@ -16,6 +17,7 @@ import { initLanding } from "./pages/landing.js";
 initTheme();
 initPageTransitions();
 initReveal();
+initTicker();
 
 const page = document.body.dataset.page;
 

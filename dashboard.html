@@ -31,45 +31,199 @@
           <p data-date></p>
         </div>
         <div class="flex">
+          <button class="btn ghost" data-open-cmd>Cmd Panel ?K</button>
           <div class="chip" data-clock></div>
           <button class="btn ghost" data-logout>Logout</button>
         </div>
       </div>
 
-      <section class="widgets">
-        <div class="card glass widget">
-          <div class="section-title">Productivity Score</div>
-          <div class="score-ring"><span data-score>0</span></div>
+      <div class="ticker pro" aria-label="System updates">
+        <div class="ticker-track">
+          <span>PulseOS Live • Focus window 2–5 PM • Shield 82% • Auto-schedule enabled • Queue steady</span>
+          <span>PulseOS Live • Focus window 2–5 PM • Shield 82% • Auto-schedule enabled • Queue steady</span>
         </div>
-        <div class="card glass widget">
-          <div class="section-title">Focus Timer</div>
-          <div class="focus-timer" data-focus-timer>00:00</div>
-          <button class="btn" data-focus-start>Start</button>
+      </div>
+
+      <section class="dash-hero reveal">
+        <div class="dash-hero-main">
+          <div class="badge">PulseOS Control</div>
+          <h1>Minimal. Aesthetic. Precise.</h1>
+          <p>Curated productivity control with energy-aware orchestration and distraction defense.</p>
+          <div class="dash-hero-actions">
+            <button class="btn" data-action="Focus Sprint">Start Focus Sprint</button>
+            <button class="btn ghost" data-action="Auto Schedule">Auto-Schedule</button>
+          </div>
+          <div class="dash-hero-status" data-hero-status>System calibrated. Waiting for next move.</div>
         </div>
-        <div class="card glass widget">
-          <div class="section-title">AI Pulse</div>
-          <p>Current mood filter: <strong data-mood>All</strong></p>
-          <ul data-suggestions></ul>
-        </div>
-        <div class="card glass widget">
-          <div class="section-title">Cognitive Load</div>
-          <p>Load: <strong>68%</strong></p>
-          <p>Risk: <span class="badge">Medium</span></p>
+        <div class="dash-hero-cards">
+          <div class="card glass netflix-card" data-card="Focus Shield">
+            <div class="section-title">Focus Shield</div>
+            <h3>Distraction Armor</h3>
+            <p>Noise dampening + intention guard.</p>
+          </div>
+          <div class="card glass netflix-card" data-card="Energy Engine">
+            <div class="section-title">Energy Engine</div>
+            <h3>Peak Alignment</h3>
+            <p>Schedule work at high-energy windows.</p>
+          </div>
         </div>
       </section>
 
-      <section class="two-col" style="margin-top:2rem;">
-        <div class="card glass">
-          <div class="section-title">Life Map</div>
-          <div class="mindmap-wrap"><canvas id="mindmap"></canvas></div>
+      <section class="dash-kpis">
+        <div class="kpi-card netflix-card" data-card="Precision Score">
+          <div class="kpi-label">Precision Score</div>
+          <div class="kpi-value" data-score>0</div>
+          <div class="kpi-meta">Momentum stable</div>
         </div>
-        <div class="card glass">
-          <div class="section-title">Feature Arsenal</div>
-          <ul data-features></ul>
+        <div class="kpi-card netflix-card" data-card="Focus Pulse">
+          <div class="kpi-label">Focus Pulse</div>
+          <div class="kpi-value" data-focus-timer>00:00</div>
+          <button class="btn" data-action="Focus Sprint">Start Sprint</button>
+        </div>
+        <div class="kpi-card netflix-card" data-card="Energy Forecast">
+          <div class="kpi-label">Energy Forecast</div>
+          <div class="kpi-value">High</div>
+          <div class="kpi-meta">Peak window: 2-5 PM</div>
+        </div>
+      </section>
+
+      <section class="dash-section">
+        <div class="section-title-row">
+          <h3>Command Modules</h3>
+          <span class="badge">Live Systems</span>
+        </div>
+        <div class="dash-modules">
+          <div class="card glass netflix-card" data-card="AI Pulse">
+            <div class="section-title">AI Pulse</div>
+            <p>Current mood filter: <strong data-mood>All</strong></p>
+            <ul data-suggestions></ul>
+            <button class="btn ghost" data-action="Refresh Pulse">Refresh Pulse</button>
+          </div>
+          <div class="card glass netflix-card" data-card="Auto Scheduler">
+            <div class="section-title">Auto Scheduler</div>
+            <p>Slots tasks into your energy peaks.</p>
+            <div class="chip" data-next-slot>Next slot: 15:30</div>
+            <button class="btn ghost" data-action="Auto Schedule">Auto-Schedule Now</button>
+          </div>
+          <div class="card glass netflix-card" data-card="Distraction Shield">
+            <div class="section-title">Distraction Shield</div>
+            <p>Shield strength: <strong data-shield>82%</strong></p>
+            <div class="chip" data-shield-state>Focus lock armed</div>
+            <button class="btn ghost" data-action="Shield">Engage Shield</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="dash-section dash-scroll-section">
+        <div class="section-title-row">
+          <h3>Pulse Boards</h3>
+          <span class="badge">Live Queues</span>
+        </div>
+        <div class="card-rail" data-rail>
+          <div class="rail-track">
+            <div class="rail-card netflix-card" data-card="Focus Queue">
+              <div class="section-title">Focus Queue</div>
+              <ul class="dash-list" data-focus-queue></ul>
+              <button class="btn ghost" data-action="Shuffle Queue">Shuffle Queue</button>
+            </div>
+            <div class="rail-card netflix-card" data-card="Ritual Builder">
+              <div class="section-title">Ritual Builder</div>
+              <p>Activate a ritual to trigger flow.</p>
+              <div class="dash-pill-grid" data-rituals></div>
+              <button class="btn ghost" data-action="Ritual">Start Ritual</button>
+            </div>
+            <div class="rail-card netflix-card" data-card="Signal Stream">
+              <div class="section-title">Signal Stream</div>
+              <ul class="dash-list" data-signal-stream></ul>
+              <button class="btn ghost" data-action="Signal">Refresh Stream</button>
+            </div>
+            <div class="rail-card netflix-card" data-card="Quick Actions">
+              <div class="section-title">Quick Actions</div>
+              <div class="dash-action-grid">
+                <button class="btn ghost" data-action="Quick Capture">Quick Capture</button>
+                <button class="btn ghost" data-action="Clear Backlog">Clear Backlog</button>
+                <button class="btn ghost" data-action="Plan Day">Plan Day</button>
+                <button class="btn ghost" data-action="Sync Goals">Sync Goals</button>
+              </div>
+            </div>
+            <div class="rail-card netflix-card" data-card="Micro Missions">
+              <div class="section-title">Micro Missions</div>
+              <ul class="dash-list" data-micro-missions></ul>
+              <button class="btn ghost" data-action="Mission">Start Mission</button>
+            </div>
+            <div class="rail-card netflix-card" data-card="Energy Map">
+              <div class="section-title">Energy Map</div>
+              <div class="dash-pill-grid" data-energy-map></div>
+              <button class="btn ghost" data-action="Energy">Recalibrate</button>
+            </div>
+            <div class="rail-card netflix-card" data-card="Focus Queue Clone">
+              <div class="section-title">Focus Queue</div>
+              <ul class="dash-list" data-focus-queue></ul>
+              <button class="btn ghost" data-action="Shuffle Queue">Shuffle Queue</button>
+            </div>
+            <div class="rail-card netflix-card" data-card="Ritual Builder Clone">
+              <div class="section-title">Ritual Builder</div>
+              <p>Activate a ritual to trigger flow.</p>
+              <div class="dash-pill-grid" data-rituals></div>
+              <button class="btn ghost" data-action="Ritual">Start Ritual</button>
+            </div>
+            <div class="rail-card netflix-card" data-card="Signal Stream Clone">
+              <div class="section-title">Signal Stream</div>
+              <ul class="dash-list" data-signal-stream></ul>
+              <button class="btn ghost" data-action="Signal">Refresh Stream</button>
+            </div>
+            <div class="rail-card netflix-card" data-card="Quick Actions Clone">
+              <div class="section-title">Quick Actions</div>
+              <div class="dash-action-grid">
+                <button class="btn ghost" data-action="Quick Capture">Quick Capture</button>
+                <button class="btn ghost" data-action="Clear Backlog">Clear Backlog</button>
+                <button class="btn ghost" data-action="Plan Day">Plan Day</button>
+                <button class="btn ghost" data-action="Sync Goals">Sync Goals</button>
+              </div>
+            </div>
+            <div class="rail-card netflix-card" data-card="Micro Missions Clone">
+              <div class="section-title">Micro Missions</div>
+              <ul class="dash-list" data-micro-missions></ul>
+              <button class="btn ghost" data-action="Mission">Start Mission</button>
+            </div>
+            <div class="rail-card netflix-card" data-card="Energy Map Clone">
+              <div class="section-title">Energy Map</div>
+              <div class="dash-pill-grid" data-energy-map></div>
+              <button class="btn ghost" data-action="Energy">Recalibrate</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dash-insights">
+        <div class="card glass netflix-card" data-card="Next Best Actions">
+          <div class="section-title">Next Best Actions</div>
+          <ul class="dash-list" data-next-actions></ul>
+        </div>
+        <div class="card glass netflix-card" data-card="Momentum Signals">
+          <div class="section-title">Momentum Signals</div>
+          <ul class="dash-list" data-signals></ul>
+        </div>
+        <div class="card glass netflix-card" data-card="System Flags">
+          <div class="section-title">System Flags</div>
+          <ul class="dash-list" data-flags></ul>
         </div>
       </section>
     </main>
   </div>
+
+  <div class="cmd-overlay" data-cmd-overlay aria-hidden="true">
+    <div class="cmd-panel">
+      <div class="cmd-header">
+        <span class="badge">Command Panel</span>
+        <button class="btn ghost" data-cmd-close>Close</button>
+      </div>
+      <input class="input cmd-input" placeholder="Type a command..." data-cmd-input />
+      <div class="cmd-list" data-cmd-list></div>
+      <div class="cmd-footer">Press Esc to close • Enter to execute • ?/Ctrl + K to open</div>
+    </div>
+  </div>
+
   <nav class="bottom-nav">
     <a data-page="dashboard" href="dashboard.html">Dashboard</a>
     <a data-page="tasks" href="tasks.html">Tasks</a>
