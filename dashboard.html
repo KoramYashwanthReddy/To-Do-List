@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PulseOS | Dashboard</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body data-page="dashboard">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">PulseOS</div>
+      <nav>
+        <a data-page="dashboard" href="dashboard.html">Dashboard</a>
+        <a data-page="tasks" href="tasks.html">Task Manager</a>
+        <a data-page="calendar" href="calendar.html">Calendar</a>
+        <a data-page="analytics" href="analytics.html">Analytics</a>
+        <a data-page="focus" href="focus.html">Focus Mode</a>
+        <a data-page="lab" href="lab.html">Experiment Lab</a>
+        <a data-page="profile" href="profile.html">Profile</a>
+        <a data-page="settings" href="settings.html">Settings</a>
+      </nav>
+    </aside>
+    <main class="app-content">
+      <div class="topbar">
+        <div>
+          <h2 data-greeting>Welcome</h2>
+          <p data-date></p>
+        </div>
+        <div class="flex">
+          <div class="chip" data-clock></div>
+          <button class="btn ghost" data-logout>Logout</button>
+        </div>
+      </div>
+
+      <section class="widgets">
+        <div class="card glass widget">
+          <div class="section-title">Productivity Score</div>
+          <div class="score-ring"><span data-score>0</span></div>
+        </div>
+        <div class="card glass widget">
+          <div class="section-title">Focus Timer</div>
+          <div class="focus-timer" data-focus-timer>00:00</div>
+          <button class="btn" data-focus-start>Start</button>
+        </div>
+        <div class="card glass widget">
+          <div class="section-title">AI Pulse</div>
+          <p>Current mood filter: <strong data-mood>All</strong></p>
+          <ul data-suggestions></ul>
+        </div>
+        <div class="card glass widget">
+          <div class="section-title">Cognitive Load</div>
+          <p>Load: <strong>68%</strong></p>
+          <p>Risk: <span class="badge">Medium</span></p>
+        </div>
+      </section>
+
+      <section class="two-col" style="margin-top:2rem;">
+        <div class="card glass">
+          <div class="section-title">Life Map</div>
+          <div class="mindmap-wrap"><canvas id="mindmap"></canvas></div>
+        </div>
+        <div class="card glass">
+          <div class="section-title">Feature Arsenal</div>
+          <ul data-features></ul>
+        </div>
+      </section>
+    </main>\n  </div>\n`n  </div>`n
+</html>
+
+
+
+  <nav class="bottom-nav">
+    <a data-page="dashboard" href="dashboard.html">Dashboard</a>
+    <a data-page="tasks" href="tasks.html">Tasks</a>
+    <a data-page="calendar" href="calendar.html">Calendar</a>
+    <a data-page="focus" href="focus.html">Focus</a>
+    <a data-page="analytics" href="analytics.html">Analytics</a>
+    <a data-page="settings" href="settings.html">Settings</a>
+  </nav>
+  <script type="module" src="js/app.js"></script>
+</body>\n</html>

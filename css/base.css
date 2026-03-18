@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg-0: #050607;
+  --bg-1: #0a0b0d;
+  --bg-2: #121316;
+  --glass: rgba(255, 255, 255, 0.06);
+  --glass-strong: rgba(255, 255, 255, 0.12);
+  --stroke: rgba(255, 255, 255, 0.12);
+  --text-0: #ffffff;
+  --text-1: #d6d6d6;
+  --text-2: #a4a4a4;
+  --accent-0: #ffffff;
+  --accent-1: #bdbdbd;
+  --accent-2: #ffb86b;
+  --accent-3: #7a6cff;
+  --success: #57f287;
+  --danger: #ff5d5d;
+  --shadow-1: 0 10px 30px rgba(0, 0, 0, 0.6);
+  --shadow-2: 0 24px 60px rgba(0, 0, 0, 0.7);
+  --blur: blur(16px);
+  --radius-1: 12px;
+  --radius-2: 18px;
+  --radius-3: 28px;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Sora", system-ui, sans-serif;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg-0: #ffffff;
+  --bg-1: #f6f6f6;
+  --bg-2: #ececec;
+  --glass: rgba(255, 255, 255, 0.85);
+  --glass-strong: rgba(255, 255, 255, 0.95);
+  --stroke: rgba(10, 10, 10, 0.12);
+  --text-0: #0b0b0b;
+  --text-1: #1f1f1f;
+  --text-2: #4a4a4a;
+  --accent-0: #0b0b0b;
+  --accent-1: #444444;
+  --accent-2: #ff922b;
+  --accent-3: #5f5bff;
+  --success: #27ae60;
+  --danger: #e74c3c;
+  --shadow-1: 0 12px 30px rgba(15, 15, 15, 0.08);
+  --shadow-2: 0 24px 50px rgba(15, 15, 15, 0.12);
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(1000px 600px at 15% 10%, rgba(255, 255, 255, 0.06), transparent 60%),
+    radial-gradient(800px 500px at 85% 20%, rgba(255, 255, 255, 0.04), transparent 50%),
+    linear-gradient(180deg, var(--bg-0), var(--bg-1));
+  color: var(--text-0);
+  font-family: var(--font-body);
+  letter-spacing: 0.2px;
+  overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(700px 400px at 70% 80%, rgba(255, 255, 255, 0.04), transparent 60%),
+    radial-gradient(500px 300px at 20% 70%, rgba(255, 255, 255, 0.03), transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+main, header, section, aside, nav, footer {
+  position: relative;
+  z-index: 1;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.5px;
+}
+
+p {
+  margin: 0;
+  color: var(--text-1);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease both;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--stroke);
+  box-shadow: var(--shadow-1);
+  backdrop-filter: var(--blur);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+}
+
+.glass:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-2);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.neu {
+  background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(0,0,0,0.35));
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.6), -8px -8px 20px rgba(50, 50, 50, 0.2);
+}
+
+.tag {
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--accent-0);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge {
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--accent-0);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn {
+  padding: 0.7rem 1.1rem;
+  border-radius: 12px;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.9));
+  color: #0b0b0b;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+:root[data-theme="light"] .btn {
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0.9), rgba(50, 50, 50, 0.9));
+  color: #ffffff;
+}
+
+\.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.02);
+}
+
+\.btn\.ghost {
+  background: transparent;
+  border: 1px solid var(--stroke);
+  color: var(--text-1);
+}
+
+.input {
+  background: rgba(8, 8, 10, 0.7);
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  padding: 0.7rem 0.9rem;
+  color: var(--text-0);
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+:root[data-theme="light"] .input {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.input:focus {
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+}
+
+.chip {
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  border: 1px solid var(--stroke);
+  color: var(--text-2);
+}
+
+.grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.theme-fab {
+  position: fixed;
+  right: 1.4rem;
+  top: 1.4rem;
+  z-index: 999;
+}
+
+.theme-fab button {
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(12, 12, 12, 0.7);
+  border: 1px solid var(--stroke);
+  color: var(--text-1);
+  cursor: pointer;
+  transition: transform 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
+}
+
+:root[data-theme="light"] .theme-fab button {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.theme-fab button:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow: var(--shadow-1);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --radius-2: 16px;
+  }
+  .grid {
+    gap: 1rem;
+  }
+}
+
+body {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+body.page-ready {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body.page-exit {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

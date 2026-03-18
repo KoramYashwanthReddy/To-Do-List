@@ -1,0 +1,214 @@
+.auth-shell {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  min-height: 100vh;
+}
+
+.auth-hero {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.auth-panel {
+  padding: 3rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+  border-radius: var(--radius-3);
+}
+
+.form-group {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+.kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.kpi span {
+  font-size: 0.75rem;
+  color: var(--text-2);
+}
+
+.kpi strong {
+  font-size: 1.4rem;
+}
+
+.task-card {
+  padding: 1rem;
+  border-radius: 16px;
+  border: 1px solid var(--stroke);
+  background: rgba(12, 18, 32, 0.75);
+  display: grid;
+  gap: 0.7rem;
+  transition: transform 0.25s ease, border 0.25s ease, box-shadow 0.25s ease;
+}
+
+:root[data-theme="light"] .task-card {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.task-card:hover {
+  transform: translateY(-3px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: var(--shadow-2);
+}
+
+.task-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.kanban {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.kanban-column {
+  padding: 1rem;
+  border-radius: 16px;
+  border: 1px dashed rgba(255,255,255,0.12);
+  min-height: 300px;
+}
+
+.kanban-column h4 {
+  margin-bottom: 1rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255,255,255,0.08);
+}
+
+.timeline-item {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-0);
+  box-shadow: 0 0 12px rgba(255,255,255,0.4);
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.6rem;
+}
+
+.calendar .day {
+  padding: 0.8rem;
+  min-height: 90px;
+  border-radius: 14px;
+  background: rgba(10, 16, 28, 0.7);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+:root[data-theme="light"] .calendar .day {
+  background: rgba(255,255,255,0.85);
+}
+
+.calendar .day strong {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-2);
+  margin-bottom: 0.4rem;
+}
+
+.mindmap-wrap {
+  height: 320px;
+  border-radius: 20px;
+  border: 1px solid var(--stroke);
+  overflow: hidden;
+}
+
+.widget {
+  cursor: grab;
+}
+
+.widget.dragging {
+  opacity: 0.5;
+}
+
+.toast {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 14px;
+  background: rgba(15, 23, 38, 0.9);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--text-1);
+  box-shadow: var(--shadow-1);
+  z-index: 999;
+  animation: fadeIn 0.3s ease both;
+}
+
+.netflix-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+  transform-origin: center;
+  position: relative;
+  z-index: 1;
+}
+
+.netflix-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: var(--shadow-2);
+  border-color: rgba(255, 255, 255, 0.35);
+  z-index: 5;
+}
+
+.netflix-card.active {
+  transform: translateY(-6px) scale(1.07);
+  box-shadow: var(--shadow-2);
+}
+
+@media (max-width: 1000px) {
+  .auth-shell {
+    grid-template-columns: 1fr;
+  }
+  .auth-panel {
+    padding: 2rem;
+  }
+  .auth-hero {
+    padding: 2rem;
+  }
+}

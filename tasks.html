@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PulseOS | Task Manager</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body data-page="tasks">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">PulseOS</div>
+      <nav>
+        <a data-page="dashboard" href="dashboard.html">Dashboard</a>
+        <a data-page="tasks" href="tasks.html">Task Manager</a>
+        <a data-page="calendar" href="calendar.html">Calendar</a>
+        <a data-page="analytics" href="analytics.html">Analytics</a>
+        <a data-page="focus" href="focus.html">Focus Mode</a>
+        <a data-page="lab" href="lab.html">Experiment Lab</a>
+        <a data-page="profile" href="profile.html">Profile</a>
+        <a data-page="settings" href="settings.html">Settings</a>
+      </nav>
+    </aside>
+    <main class="app-content">
+      <div class="topbar">
+        <div>
+          <h2 data-greeting>Task Command</h2>
+          <p data-date></p>
+        </div>
+        <div class="flex">
+          <div class="chip" data-clock></div>
+          <button class="btn ghost" data-logout>Logout</button>
+        </div>
+      </div>
+
+      <section class="card glass">
+        <div class="page-header">
+          <h3>Create Intelligent Task</h3>
+          <span class="badge">Auto-priority Engine</span>
+        </div>
+        <form data-task-form>
+          <div class="task-inputs">
+            <input class="input" name="title" placeholder="Task title" required />
+            <input class="input" name="tags" placeholder="Tags (comma)" />
+            <input class="input" name="dependencies" placeholder="Dependencies (ids)" />
+            <input class="input" name="estimate" type="number" placeholder="Minutes" required />
+          </div>
+          <div class="task-inputs" style="margin-top:0.8rem;">
+            <select class="input" name="priority">
+              <option>Quantum</option>
+              <option>Nova</option>
+              <option>Nebula</option>
+              <option>Pulse</option>
+              <option>Zenith</option>
+              <option>Orbit</option>
+              <option>Flux</option>
+              <option>Ion</option>
+              <option>Signal</option>
+              <option>Echo</option>
+              <option>Drift</option>
+            </select>
+            <select class="input" name="energy">
+              <option>High</option>
+              <option>Medium</option>
+              <option>Low</option>
+            </select>
+            <select class="input" name="mood">
+              <option>Curious</option>
+              <option>Calm</option>
+              <option>Focused</option>
+              <option>Reflective</option>
+              <option>Bold</option>
+            </select>
+            <select class="input" name="recurring">
+              <option>none</option>
+              <option>daily</option>
+              <option>weekly</option>
+              <option>monthly</option>
+            </select>
+          </div>
+          <div class="task-inputs" style="margin-top:0.8rem;">
+            <input class="input" name="dna" placeholder="Task DNA" />
+            <input class="input" name="due" type="date" />
+            <button class="btn" type="submit">Create Task</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="two-col" style="margin-top:1.5rem;">
+        <div>
+          <div class="section-title">Task Matrix</div>
+          <div class="grid" data-task-list></div>
+        </div>
+        <div>
+          <div class="section-title">Timeline View</div>
+          <div class="card glass timeline" data-timeline></div>
+        </div>
+      </section>
+
+      <section style="margin-top:1.5rem;">
+        <div class="section-title">Kanban Command Board</div>
+        <div class="kanban" data-kanban></div>
+      </section>
+    </main>\n  </div>\n`n  </div>`n
+</html>
+
+
+
+  <nav class="bottom-nav">
+    <a data-page="dashboard" href="dashboard.html">Dashboard</a>
+    <a data-page="tasks" href="tasks.html">Tasks</a>
+    <a data-page="calendar" href="calendar.html">Calendar</a>
+    <a data-page="focus" href="focus.html">Focus</a>
+    <a data-page="analytics" href="analytics.html">Analytics</a>
+    <a data-page="settings" href="settings.html">Settings</a>
+  </nav>
+  <script type="module" src="js/app.js"></script>
+</body>\n</html>

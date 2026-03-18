@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PulseOS | Focus Mode</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body data-page="focus">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">PulseOS</div>
+      <nav>
+        <a data-page="dashboard" href="dashboard.html">Dashboard</a>
+        <a data-page="tasks" href="tasks.html">Task Manager</a>
+        <a data-page="calendar" href="calendar.html">Calendar</a>
+        <a data-page="analytics" href="analytics.html">Analytics</a>
+        <a data-page="focus" href="focus.html">Focus Mode</a>
+        <a data-page="lab" href="lab.html">Experiment Lab</a>
+        <a data-page="profile" href="profile.html">Profile</a>
+        <a data-page="settings" href="settings.html">Settings</a>
+      </nav>
+    </aside>
+    <main class="app-content">
+      <div class="topbar">
+        <div>
+          <h2 data-greeting>Focus Sanctum</h2>
+          <p data-date></p>
+        </div>
+        <div class="flex">
+          <div class="chip" data-clock></div>
+          <button class="btn ghost" data-logout>Logout</button>
+        </div>
+      </div>
+
+      <section class="focus-shell">
+        <div class="card glass">
+          <h3>Deep Work Session</h3>
+          <p>Focus style: <span class="badge" data-focus-style></span></p>
+          <div class="flex" style="margin-top:1rem;">
+            <div class="kpi"><span>Focus Meter</span><strong data-focus-meter>100%</strong></div>
+            <div class="kpi"><span>Distraction</span><strong data-distraction>Low</strong></div>
+          </div>
+          <button class="btn" style="margin-top:1rem;" data-focus-go>Start Session</button>
+        </div>
+        <div class="card glass">
+          <h3>Ambient Soundscape</h3>
+          <p>Generate a synthetic ambient wave to block distractions.</p>
+          <button class="btn" data-ambient>Start Ambient</button>
+          <div style="margin-top:1rem;">
+            <span class="chip">Anti-procrastination mode</span>
+            <span class="chip">Cognitive load guard</span>
+          </div>
+        </div>
+      </section>
+    </main>\n  </div>\n`n  </div>`n
+</html>
+
+
+
+  <nav class="bottom-nav">
+    <a data-page="dashboard" href="dashboard.html">Dashboard</a>
+    <a data-page="tasks" href="tasks.html">Tasks</a>
+    <a data-page="calendar" href="calendar.html">Calendar</a>
+    <a data-page="focus" href="focus.html">Focus</a>
+    <a data-page="analytics" href="analytics.html">Analytics</a>
+    <a data-page="settings" href="settings.html">Settings</a>
+  </nav>
+  <script type="module" src="js/app.js"></script>
+</body>\n</html>

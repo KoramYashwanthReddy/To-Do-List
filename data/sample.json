@@ -1,0 +1,41 @@
+{
+  "pulseos.profile": {
+    "name": "Nova",
+    "email": "nova@pulseos.ai",
+    "title": "Productivity Architect",
+    "theme": "Aurora",
+    "xp": 1280,
+    "level": 7,
+    "streak": 12,
+    "focusStyle": "Deep Wave"
+  },
+  "pulseos.tasks": [
+    {
+      "id": "task-1",
+      "title": "Design Life Map",
+      "status": "active",
+      "priority": "Quantum",
+      "energy": "High",
+      "estimate": 120,
+      "mood": "Curious",
+      "tags": ["Vision", "Canvas"],
+      "due": null,
+      "dependencies": [],
+      "recurring": "weekly",
+      "subtasks": [
+        { "id": "task-1-1", "title": "Gather life pillars", "done": true, "subtasks": [] },
+        { "id": "task-1-2", "title": "Draft map nodes", "done": false, "subtasks": [] }
+      ],
+      "dna": "Explorer",
+      "createdAt": 0
+    }
+  ],
+  "pulseos.settings": {
+    "focusLength": 50,
+    "breakLength": 10,
+    "soundscape": "Nebula Drift",
+    "notifications": true,
+    "autoSchedule": true,
+    "moodFilter": "All"
+  }
+}
